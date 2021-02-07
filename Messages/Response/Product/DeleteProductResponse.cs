@@ -4,6 +4,7 @@ namespace ECommereceAPI.Messages.Response.Product
 {
     public class DeleteProductResponse : ResponseBase
     {
-        public ProductDto Brand { get; set; }
+        public long Id { get; set; }
+        public ProductDto Product { get; set; }
     }
 }

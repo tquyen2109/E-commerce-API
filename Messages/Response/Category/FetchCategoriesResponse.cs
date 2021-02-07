@@ -9,6 +9,6 @@ namespace ECommereceAPI.Messages.Response.Category
         public bool HasPreviousPage { get; set; }
         public bool HasNextPages { get; set; }
         public int[] Pages { get; set; }
-        public IEnumerable<BrandDto> Categories { get; set; }
+        public IEnumerable<CategoryDto> Categories { get; set; }
     }
 }

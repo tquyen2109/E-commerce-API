@@ -4,6 +4,7 @@ namespace ECommereceAPI.Messages.Response.Category
 {
     public class CreateCategoryResponse : ResponseBase
     {
-        public CategoryDto Brand { get; set; }
+        public long Id { get; set; }
+        public CategoryDto Category { get; set; }
     }
 }

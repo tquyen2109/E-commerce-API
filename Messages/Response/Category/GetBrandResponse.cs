@@ -4,6 +4,6 @@ namespace ECommereceAPI.Messages.Response.Category
 {
     public class GetCategoryResponse : ResponseBase
     {
-        public CategoryDto Brand { get; set; }
+        public CategoryDto Category { get; set; }
     }
 }

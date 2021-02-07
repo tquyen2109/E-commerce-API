@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ECommereceAPI.Messages.DTOs.Product;
 using ECommereceAPI.Models.Product;
 
@@ -136,5 +137,38 @@ namespace ECommereceAPI.Messages
 
             return productDto;
         }
+        public List<BrandDto> MapToBrandDtos(IEnumerable<Brand> brands)
+        {
+            var brandDtos = new List<BrandDto>();
+            foreach (var brand in brands)
+            {
+                var brandDto = MapToBrandDto(brand);
+                brandDtos.Add(brandDto);
+            }
+            return brandDtos;
+        }
+
+        public List<CategoryDto> MapToCategoryDtos(IEnumerable<Category> categories)
+        {
+            var categoryDtos = new List<CategoryDto>();
+            foreach (var category in categories)
+            {
+                var categoryDto = MapToCategoryDto(category);
+                categoryDtos.Add(categoryDto);
+            }
+            return categoryDtos;
+        }
+
+        public List<ProductDto> MapToProductDtos(IEnumerable<Product> products)
+        {
+            var productDtos = new List<ProductDto>();
+            foreach (var product in products)
+            {
+                var productDto = MapToProductDto(product);
+                productDtos.Add(productDto);
+            }
+            return productDtos;
+        }
+
     }
 }

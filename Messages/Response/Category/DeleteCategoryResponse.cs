@@ -4,6 +4,6 @@ namespace ECommereceAPI.Messages.Response.Category
 {
     public class DeleteCategoryResponse : ResponseBase
     {
-        public CategoryDto Brand { get; set; }
+        public CategoryDto Category { get; set; }
     }
 }

@@ -7,8 +7,9 @@ namespace ECommereceAPI.Messages.Response.Product
     {
         public int ProductsPerPage { get; set; }
         public bool HasPreviousPage { get; set; }
+        public int CurrentPage { get; set; }
         public bool HasNextPages { get; set; }
         public int[] Pages { get; set; }
-        public IEnumerable<ProductDto> Brands { get; set; }
+        public IEnumerable<ProductDto> Products { get; set; }
     }
 }
