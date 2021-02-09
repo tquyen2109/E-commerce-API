@@ -9,7 +9,7 @@ using ECommereceAPI.Repositories;
 
 namespace ECommereceAPI.Services.Implementations
 {
-    public class CatalogueService
+    public class CatalogueService : ICatalogueService
     {
         private IProductRepository _productRepository;
         private MessageMapper _messageMapper;

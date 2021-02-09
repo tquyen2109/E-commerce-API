@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using ECommereceAPI.Database;
 using ECommereceAPI.Repositories;
 using ECommereceAPI.Repositories.Implementations;
+using ECommereceAPI.Services;
+using ECommereceAPI.Services.Implementations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -41,7 +43,10 @@ namespace ECommereceAPI
             services.AddTransient<ICategoryRepository, CategoryRepository>();
 
             services.AddTransient<IProductRepository, ProductRepository>();
-
+            services.AddTransient<IBrandService, BrandService>();
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<ICatalogueService, CatalogueService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
